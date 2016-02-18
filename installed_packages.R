@@ -1,0 +1,5 @@
+tmp<-installed.packages()
+installedpkgs<-as.vector(tmp[is.na(tmp[,"Priority"]),1])
+installedpkgs.other<-as.vector(tmp[!is.na(tmp[,"Priority"]),1])
+save(installedpkgs,file="./installedpkgs_old.rda")
+save(installedpkgs.other,file="./installedpkgs_other.rda")
